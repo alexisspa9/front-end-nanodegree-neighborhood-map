@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='css/style.css' rel='stylesheet'>
+	<title>Paros Neighborhood Map Project.</title>
+	<style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+    </style>
+
+</head>
+
+<body>
+
+	<header>
+		Top Paros island places..
+	</header>
+
+	<nav>
+		<div id='menu-button' data-bind='click: menuToggle'>&#9776;</div>
+		<input id='address' type='text' data-bind='textInput: searchString, event: {input: listFilter}'>
+	</nav>
+
+	<ul id='menu' class='menu' data-bind='visible: showMenu'>
+		<!-- ko foreach: listItems -->
+			<li data-bind='visible: pShow, component: {
+					name: "item-template",
+					params: { item: $data }
+				}'></li>
+		<!-- /ko -->
+		<li style="padding-right: 15px" data-bind='visible: noMoreContent'>There is no content to show</li>
+	</ul>
+
+	<div id='map' class='map-div'></div>
+
+	<footer>
+		enjoy...
+	</footer>
+
+	<script src='js/lib/knockout-3.2.0.js'></script>
+	<script src='js/lib/jquery.min.js'></script>
+
+	<script src='js/app/model.js'></script>
+	<script src='js/app/view-model.js'></script>
+	<script src='js/app/init.js'></script>
+
+	<script async defer src='https://maps.googleapis.com/maps/api/js?clinet=AIzaSyBRHEzOBGpq3uwiiwz9j_BwhCK0m1SWkUk&callback=initialize' onerror='mapLoadErr()'></script>
+
+</body>
+
+</html>

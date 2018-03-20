@@ -1,0 +1,170 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: grey;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	height: 40px;
+	width: 100%;
+	padding-top: 12px;
+	text-align: center;
+	color:	#004196;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+nav {
+	height: 50px;
+	display: flex;
+}
+
+nav div {
+	padding: 0;
+	font-size: 30px;
+	font-weight: bold;
+	color: #004196;
+	margin: 7px 5px 5px 15px;
+}
+
+nav input,
+nav button {
+	margin: 7px 10px 7px 10px;
+	font-size: 14px;
+}
+
+nav input {
+	width: 100%;
+	margin-right: 10px;
+	padding-left: 5px;
+}
+
+ul li {
+	padding: 0 0 0 15px;
+	list-style-type: none;
+	height: 100%;
+}
+
+ul li div {
+	display: flex;
+}
+
+ul li div p,
+ul li div input {
+	margin: 0 auto 0 0;
+	padding: 7px 20px 7px 0;
+	cursor: default;
+}
+
+ul li div button {
+	margin: 0;
+	padding: 7px 10px;
+	border: none;
+	background: none;
+	font-size: 20px;
+}
+
+footer {
+	padding: 5px 0 0 7px;
+	background-color: black;
+	width: 100%;
+	height: 30px;
+	bottom: 0;
+	position: fixed;
+	color: white;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+	float: left;
+	z-index: 99;
+	position: absolute;
+	top: 108px;
+	left: 18px;
+	color: #004196;
+	border: 2px solid #004196;
+	font-size: 18px;
+}
+
+.map-div {
+	margin: 10px;
+	padding: 10px;
+	outline: 2px solid #004196;
+	height: calc(100% - 140px);
+}
+
+.info {
+	height: 100px;
+}
+
+@media (max-height: 450px) {
+	.menu {
+		max-height: 50%;
+		overflow: scroll;
+	}
+}
+
+@media (max-width: 400px), (max-height: 450px) {
+
+	header {
+		padding-top: 7px;
+		height: 30px;
+		font-size: 18px;
+	}
+
+	nav {
+		height: 30px;
+	}
+
+	nav div {
+		font-size: 18px;
+	}
+
+	nav div,
+	nav input,
+	nav button {
+		margin: 3px 5px 3px 10px;
+	}
+
+	nav input,
+	nav button {
+		font-size: 14px;
+	}
+
+	ul li {
+		padding-left: 7px;
+	}
+
+	ul li div {
+		height: 25px;
+	}
+
+	ul li div p,
+	ul li div input,
+	ul li div button {
+		padding: 3px;
+	}
+
+	.menu {
+		font-size: 15px;
+		left: 15px;
+		top: 75px;
+		max-width: 90%;
+	}
+
+	.map-div {
+		height: calc(100% - 110px);
+	}
+}
